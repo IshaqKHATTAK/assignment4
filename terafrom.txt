@@ -1,0 +1,25 @@
+# Download the latest version of Terraform (adjust the version as needed)
+wget https://releases.hashicorp.com/terraform/<VERSION>/terraform_<VERSION>_linux_amd64.zip
+
+# Unzip the downloaded package
+unzip terraform_<VERSION>_linux_amd64.zip
+
+# Move the Terraform binary to a directory in your PATH
+sudo mv terraform /usr/local/bin/
+
+
+sudo apt-get update
+sudo apt-get install awscli
+
+aws configure
+
+export AWS_ACCESS_KEY_ID=your_access_key_id
+export AWS_SECRET_ACCESS_KEY=your_secret_access_key
+export AWS_DEFAULT_REGION=your_default_region
+
+
+terraform init
+terraform validate
+terraform plan
+terraform apply
+
